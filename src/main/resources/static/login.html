@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div th:if="${param.error}">
+        </div>
+</body>
+<div class="container">
+  
+  <div class="row" id="pwd-container">
+    
+    <div class="row">
+      <section class="login-form">
+        <form action="j_spring_security_check" method="post" action="#" role="login">
+          <img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" alt="" />
+          <!-- <div th:if="${param.error}">
+                        <div class="alert alert-danger">
+                            Invalid username and password.
+                        </div>
+                    </div>
+                    <div th:if="${param.logout}">
+                        <div class="alert alert-info">
+                            You have been logged out.
+                        </div>
+                    </div> -->
+          <div>
+          <label><input type="text" name="username" placeholder="Username" class="form-control input-lg"/> </label>
+          </div>
+          <div>
+          <label><input type="password" name="password" placeholder="Password" class="form-control input-lg"/> </label>
+          </div>
+          <div class="pwstrength_viewport_progress"></div>
+          
+          <div >
+          <button type="submit" name="go" class="btn btn-primary">Sign in</button>
+          </div>
+          
+          
+        </form>
+        
+      </section>  
+      </div>
+      <div class="col-md-6">
+      </div >
+      
+     <!--  <form   action="j_spring_security_check" method="post">
+					
+					 <div class="control-group">
+					 <label> User Name : <input type="text" name="username" class="form-control input-lg"/> </label></div>
+					
+					<div class="control-group">
+					<label> Password: <input type="password" name="password"/> </label></div>
+					<div class="control-group">
+						<div class="controls">
+							<input value="Sign In" class="btn btn-primary" type="submit">
+							<a id="forgotPasswordLink" href="#">Forgot Password</a>
+						</div>
+					</div>
+				</form>
+ -->
+  </div>
+</div>
+</html>
